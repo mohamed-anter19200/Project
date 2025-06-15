@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+*{
+  scroll-behavior: smooth;
+}
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+.btn{
+  @apply   px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-200
+}
+.form-control{
+  @apply w-full outline-none  placeholder-gray-900 focus:border-none py-3 px-4 bg-gray-200 text-center rounded-lg   focus:outline-none 
+}
+.title{
+  @apply text-center capitalize mt-4 w-fit mx-auto text-2xl font-bold hover:text-blue-500 transition-colors duration-300
+}
+.inner-input{
+  @apply border border-gray-300 p-2 rounded w-full focus:outline-none focus:ring focus:border-blue-500 
+ 
+}
