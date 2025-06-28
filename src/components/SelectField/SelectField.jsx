@@ -8,8 +8,8 @@ const SelectField = ({ options = [], ...props }) => {
   return (
     <div className="space-y-1 mb-4">
       <select {...field} {...props} className="inner-input">
-        { role == "admin"&&<option value="" disabled hidden> Select a course</option> }
-         {role == "doctor" && props.name == "courseId" && <option value="" disabled hidden> Select a course</option> }
+        { role == "admin"&&<option value="" disabled hidden> Select a Doctor</option> }
+        {role == "doctor" && props.name == "courseId" && <option value="" disabled hidden> Select a course</option> }
         {role == "doctor" && props.name == "courseTitle" && <option value="" disabled hidden> Select a course title</option> }
         {role == "doctor" && props.name == "videoType" && <option value="" disabled hidden> Select a topic type</option> } 
         {options.map((option) => (

@@ -43,7 +43,7 @@ const LecturerSidebar = () => {
             <div className="flex items-center justify-between">
               <Link to="/lecturer">
                 <div className={`transition-all duration-300 ${!isSidebarOpen ? 'opacity-0 w-0' : 'opacity-100 w-auto'}`}>
-                  <h1 className="text-2xl font-bold text-white tracking-wide whitespace-nowrap">EduConnect</h1>
+                  <h1 className="text-2xl font-bold text-white tracking-wide whitespace-nowrap">Study Stack</h1>
                   <p className="text-gray-400 text-sm mt-1">Lecturer Dashboard</p>
                 </div>
               </Link>

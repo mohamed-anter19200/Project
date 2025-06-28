@@ -110,14 +110,14 @@ const Sidebar = () => {
             <div className="flex items-center justify-between">
                <Link to="/admin">
                <div className={`transition-all duration-300 ${!isSidebarOpen ? 'opacity-0 w-0' : 'opacity-100 w-auto'}`}>
-                <h1 className="text-2xl font-bold text-white tracking-wide whitespace-nowrap">EduConnect</h1>
+                <h1 className="text-2xl font-bold text-white tracking-wide whitespace-nowrap">Study Stack</h1>
                 <p className="text-gray-400 text-sm mt-1">Admin Dashboard</p>
               </div>
                </Link>
               {isMobile && (
                 <button
                   onClick={handleSidebarToggle}
-                  className={`p-1.5 rounded-full border text-white transition-all duration-300 overflow-hidden cursor-pointer
+                  className={`p-1.5 rounded-full border   transition-all duration-300 overflow-hidden cursor-pointer
                      hover:bg-white/10 ${!isSidebarOpen ? 'absolute left-1/2 -translate-x-1/2' : ''}`}
                 >
                   <i className={`fas ${isSidebarOpen ? 'fa-chevron-left' : 'fa-chevron-right'} text-sm`} />

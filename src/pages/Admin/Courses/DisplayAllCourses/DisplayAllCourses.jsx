@@ -36,6 +36,8 @@ export default function DisplayAllCourses() {
     </div>
   );
 
+  
+
   return (
     <div className="container mx-auto px-4">
       <DashboardTitle title="All Courses" />
@@ -46,7 +48,7 @@ export default function DisplayAllCourses() {
       {filteredCourses.length ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredCourses.map(course => (
-            <CourseCard key={course._id} {...course} />
+            <CourseCard key={course._id} {...course}/>
           ))}
         </div>
       ) : (

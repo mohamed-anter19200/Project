@@ -12,7 +12,8 @@ export async function getAllDoctors() {
 
     const { data } = await axios.request(options);
     if (data.message === "success") { 
-        return data;
+      console.log(data);
+      return data;
     }
   } catch (error) {
     return [];

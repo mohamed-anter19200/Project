@@ -2,12 +2,22 @@ import React, { useContext } from 'react'
 import useDeleteCourse from '../../hooks/Admin/Course/useDeleteCourse';
 import { userContext } from '../../context/User.context';
 import { useNavigate } from 'react-router-dom';
+import useAllDoctors from '../../hooks/Admin/Lecturer/useAllDoctors';
 
-export default function CourseCard({ semster, level, courseName, courseCode , _id}) {
+export default function CourseCard({ semster, level, courseName, courseCode , _id, doctorId}) {
   const { mutate: deleteCourse } = useDeleteCourse();
   const {role} = useContext(userContext)
   const navigate = useNavigate()
-  return (
+
+  
+  const { data } = useAllDoctors();
+  const doctor = data?.doctors?.find(doctor => doctor._id === doctorId[0]);
+  // const firstName = doctor?.firstName;
+  // const lastName = doctor?.lastName;
+  const doctorName = `${doctor?.firstName} ${doctor?.lastName}`;
+  //console.log(firstName, lastName);
+
+   return (
     <div className="bg-white p-4 rounded-lg shadow-md">
       <div className="flex flex-col gap-2">
         <div className="flex justify-between items-center">
@@ -26,11 +36,16 @@ export default function CourseCard({ semster, level, courseName, courseCode , _i
           </div>
         </div>
 
-         <div className='flex justify-between' >
+         <div>
          {role === "admin" && (
-          <div className="flex items-center gap-2 mt-2">
-          <i className="fas fa-trash text-red-600 cursor-pointer" onClick={() => deleteCourse(_id)}></i>
-        </div>
+          <div className="flex  justify-between gap-2 mt-2">
+                   <div>
+                    <h2> <span className='font-semibold'>Doctor : </span>  {doctor ? doctorName : ""}</h2>
+                  </div>
+                  <div>
+                  <i className="fas fa-trash text-red-600 cursor-pointer" onClick={() => deleteCourse(_id)}></i>
+                 </div>
+          </div>
          )}
         {role === "doctor" && (
           <div className="flex gap-2 mt-2">

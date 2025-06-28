@@ -53,8 +53,7 @@ export default function Sections() {
     <section className="container px-4 py-12 mx-auto space-y-5">
       <SectionTitle text="Choose a Section" />
 
-      {/* Filters */}
-      <div className="flex ms-10 md:w-1/2 md:justify-between flex-wrap md:flex-nowrap w-full gap-4 mb-6 items-center">
+       <div className="flex md:w-1/2 md:justify-between flex-wrap md:flex-nowrap w-full gap-4  md:gap-8  items-center">
         {renderSelect("Semester", semester, setSemester, ["First", "Second"])}
         {renderSelect("Level", level, setLevel, ["1", "2", "3", "4"])}
       </div>

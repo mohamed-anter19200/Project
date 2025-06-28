@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { logout } from "../../API/Auth/Auth";
 import { useContext } from "react";
 import { userContext } from "../../context/User.context";
-
+import logo from "../../assets/logo.jpg";
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -33,8 +33,9 @@ export default function Navbar() {
     <nav className="fixed w-full h-13 z-20 top-0 start-0 border-b bg-slate-50 border-gray-200 text-black transition-colors duration-150">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
                 
-        <div className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="self-center text-xl font-semibold whitespace-nowrap">EduConnect</span>
+        <div className="flex items-center gap-1 rtl:space-x-reverse">
+          <img src={logo} alt="logo" className="w-10 h-10 rounded-full" />
+          <span className="self-center text-xl font-semibold whitespace-nowrap">Study Stack</span>
         </div>
 
          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

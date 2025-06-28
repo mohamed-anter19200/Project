@@ -12,6 +12,7 @@ export async function getAllCourses() {
 
     const { data } = await axios.request(options);
      if (data.message === "success") {
+      console.log(data);
       return data;
     }
   } catch (error) {
@@ -41,9 +42,9 @@ export async function addCourse(values,queryClient,toast) {
       toast.success("Course added successfully!");
       return data;
     }
-   // throw new Error(data.message || "Error adding course");
   } catch (error) {
-    toast.error("Error adding course!");
+    toast.dismiss(toastId);
+    toast.error(error.response.data.message || "Error adding course!");
     }
 }
 
