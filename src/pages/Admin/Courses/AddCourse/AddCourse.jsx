@@ -44,7 +44,7 @@ export default function AddCourse() {
       <Form>
         <InputField name="courseName" placeholder="Course Name" type="text" />
         <InputField name="courseCode" placeholder="Course Code" type="text" />
-        <InputField name="level" type="text" placeholder="Level example: Level2" />
+        <InputField name="level" type="text" placeholder="Level example: level2" />
         <InputField name="semster" type="text" placeholder="Semester example: first" />
         <SelectField
           name="doctorId"
